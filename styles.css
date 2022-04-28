@@ -29,5 +29,11 @@ p {
 }
 
 input[type="number"] {
-   -moz-appearance: textfield;
+    -moz-appearance: textfield;
+   font-size: 20px;
+   text-align: center;
+   background: transparent;
+   border: none;
+   border-bottom: 1px solid white;
+   padding: 2px 5px;
 }
