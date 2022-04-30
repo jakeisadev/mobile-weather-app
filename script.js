@@ -1,9 +1,12 @@
 function myZipCode() {
     var str = document.getElementById("zip").value;
+    console.log('Length is : ', str.length);
+
     var zipCodeAlert = document.getElementById("zipcode-alert");
     var lengthRegex = /^[0-9]{5}$/.test(str);
     
-    if(!lengthRegex) {
+    if(!lengthRegex ) { //You have an error
+        console.log('Inside');
         zipCodeAlert.style.display="block";
         zipCodeAlert.innerHTML="Zip Code must be 5 digits";
         zipCodeFlag = false;
@@ -19,6 +22,6 @@ document.querySelector('input').addEventListener('input', function(e) {
         //prevVal = true;
     } else {
         this.value = prevVal;
-        alert("You may only enter numbers into this field. Please try again.")
+        // alert("You may only enter numbers into this field. Please try again.")
     }
 })
