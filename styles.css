@@ -90,7 +90,6 @@ input:invalid {
 .weather-grid {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    border: 1px solid white;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -100,6 +99,7 @@ input:invalid {
     border-radius: 5px;
     column-gap: 5px;
     overflow-x: hidden;
+    width: 95%;
 }
 
 .item {
