@@ -10,16 +10,13 @@
 <body>
     <div class="background">
     <div class="content-wrapper">
-        <form action="" method="post" id="info">
+        <form action="" method="get" id="info">
         <div class="zip-code-entry">
-            <button type="button" id="button" disabled>
             <input type="text" id="zip" name="zip" placeholder="Zip-Code"
-            onkeyup="myZipCode();" pattern="[0-9]*" minlength="5" maxlength="5" required>
-            <p id="zipcode-alert">&nbsp;</p>
-            </button>
+            onkeypress="myZipCode();" onkeydown="" pattern="[0-9]*" maxlength="5" required>
+            <p id="zipcode-alert"></p>
         </div>
         </form>
-        <div class="location">Location Dropdown as you type</div>
     <div class="weather-wrapper">
         <div class="temperature">&deg;</div>
         <div class="weather">Weather, State</div>
