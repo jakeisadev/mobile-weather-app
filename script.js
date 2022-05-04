@@ -5,7 +5,8 @@ function myZipCode() {
     let str = document.getElementById("zip").value;
     let zipCodeAlert = document.getElementById("zipcode-alert");
     
-    if(str.length < 5) { //You have an error
+    if(str.length < 5) {
+        //If str.length < 5, display an alert on doc that says below
         zipCodeAlert.style.display="block";
         zipCodeAlert.innerHTML="Zip Code must be 5 digits";
         zipCodeFlag = false;
@@ -25,11 +26,37 @@ document.querySelector('input').addEventListener('input', function(e) {
     }
 })
 
+//Validation for enter key to be used
 document.addEventListener('keypress', function (e) {
+    // If Enter is Pressed, 
+        //If the length is equal to 5, then send API request
+        //otherwise don't do anything
+
     let str = document.getElementById("zip").value;
-    if (e.keyCode === 13 && e.which === 13 && str.length < 5) {
+    if(e.key == 'Enter'){
         e.preventDefault();
-        return false;
+        if(str.length == 5){
+            getWeatherData(str);
+            console.log(Object)
+        }
+        else {
+            return false;
+        }
+        
     }
     
 });
+
+//Retrieve Weather Data
+//Set default city to Charlotte, NC
+const getWeatherData= (zip) => {
+
+    fetch(`http://api.weatherapi.com/v1/current.json?key=ab742bd6c230495d9be133233220305&q=${zip}&aqi=no`)
+    .then(res => res.json())
+    .then(data => console.log(data));
+    
+}
+
+// 
+
+//Setting variables within the object fetched from API into HTML
