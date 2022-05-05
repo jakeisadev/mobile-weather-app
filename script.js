@@ -48,15 +48,21 @@ document.addEventListener('keypress', function (e) {
 });
 
 //Retrieve Weather Data
-//Set default city to Charlotte, NC
-const getWeatherData= (zip) => {
+//Set city to whatever the user inputs
+const getWeatherData = (zip) => {
 
     fetch(`http://api.weatherapi.com/v1/current.json?key=ab742bd6c230495d9be133233220305&q=${zip}&aqi=no`)
     .then(res => res.json())
-    .then(data => console.log(data));
-    
+    .then(data => {
+        //Setting variables within the object to be applied to HTML
+        //let temp = `${data.current.temp_f}`; <-- general format
+        let temp = `${data.current.temp_f}`;
+        let weather = `${data.current.condition.text}`
+        let city = `${data.location.name}`;
+        let state = `${data.location.region}`
+        let date = `${data.current.last_updated}`
+        console.log(data);
+        console.log(date);
+    });
 }
 
-// 
-
-//Setting variables within the object fetched from API into HTML
