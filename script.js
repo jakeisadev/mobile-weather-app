@@ -53,16 +53,17 @@ const getWeatherData = (zip) => {
 
     fetch(`http://api.weatherapi.com/v1/current.json?key=ab742bd6c230495d9be133233220305&q=${zip}&aqi=no`)
     .then(res => res.json())
-    .then(data => {
+    .then((data) => {
         //Setting variables within the object to be applied to HTML
         //let temp = `${data.current.temp_f}`; <-- general format
-        let temp = `${data.current.temp_f}`;
-        let weather = `${data.current.condition.text}`
-        let city = `${data.location.name}`;
-        let state = `${data.location.region}`
+        document.getElementById("temperature").innerHTML = `${data.current.temp_f}&deg`;
+        document.getElementById("weather").innerHTML = `${data.current.condition.text}`;
+        document.getElementById("state").innerHTML = `${data.location.name}` + ", " + `${data.location.region}`;
         let date = `${data.current.last_updated}`
         console.log(data);
-        console.log(date);
+        // console.log(date);
+        if(`${data.current.condition.text}` === "Sunny") {
+            document.getElementById("icon").innerHTML = "<img src=images/sunny.png>";
+        }
     });
 }
-
