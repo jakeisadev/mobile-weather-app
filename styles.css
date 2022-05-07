@@ -66,7 +66,7 @@ input:invalid {
 .weather-wrapper {
     margin: auto;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 #temperature {
@@ -102,7 +102,7 @@ input:invalid {
     justify-content: center;
     align-items: center;
     grid-gap: 0 5px;
-    margin: 100px 10px 0 10px;
+    margin: 80px 10px 0 10px;
     height: 250px;
     border-radius: 5px;
     column-gap: 5px;
