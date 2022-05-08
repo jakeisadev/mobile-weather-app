@@ -72,7 +72,7 @@ input:invalid {
 #temperature {
     font-size: 5rem;
     color: #e5e4e2;
-    width: 100px;
+    width: 100%;
     margin: auto;
 }
 

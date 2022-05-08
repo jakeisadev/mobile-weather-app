@@ -62,6 +62,8 @@ const getWeatherData = (zip) => {
         let date = `${data.current.last_updated}`
         console.log(data);
         // console.log(date);
+
+        //Scenarios of weather along with their respective icons
         if(`${data.current.condition.text}` === "Sunny") {
             document.getElementById("icon").innerHTML = "<img src=images/sunny.png>";
         
