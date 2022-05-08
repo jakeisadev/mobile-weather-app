@@ -57,9 +57,11 @@ const getWeatherData = (zip) => {
         document.getElementById("temperature").innerHTML = `${data.current.temp_f}&deg`;
         document.getElementById("weather").innerHTML = `${data.current.condition.text}`;
         document.getElementById("state").innerHTML = `${data.location.name}` + ", " + `${data.location.region}`;
-        let date = `${data.current.last_updated}`
+        document.getElementById("humidity").innerHTML = `${data.current.humidity} g/m3`;
+        document.getElementById("wind-dr").innerHTML = `${data.current.wind_dir}`;
+        document.getElementById("wind-mph").innerHTML = `${data.current.wind_mph}`;
+        document.getElementById("precip").innerHTML = `${data.current.precip_in}`
         console.log(data);
-        // console.log(date);
 
         //Dynamically change background according to weather and
         //scenarios of weather along with their respective icon assignments
