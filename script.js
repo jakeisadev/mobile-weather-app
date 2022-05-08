@@ -53,7 +53,6 @@ const getWeatherData = (zip) => {
     .then(res => res.json())
     .then((data) => {
         //Setting variables within the object to be applied to HTML
-        //let temp = `${data.current.temp_f}`; <-- general format
         document.getElementById("temperature").innerHTML = `${data.current.temp_f}&deg`;
         document.getElementById("weather").innerHTML = `${data.current.condition.text}`;
         document.getElementById("state").innerHTML = `${data.location.name}` + ", " + `${data.location.region}`;
