@@ -41,10 +41,8 @@ document.addEventListener('keypress', function (e) {
         }
         else {
             return false;
-        }
-        
+        }   
     }
-    
 });
 
 //Retrieve Weather Data
@@ -63,8 +61,29 @@ const getWeatherData = (zip) => {
         console.log(data);
         // console.log(date);
 
-        //Scenarios of weather along with their respective icons
+        //Dynamically change background according to weather
+        if(`${data.current.condition.text.includes('ist')}`) {
+            document.getElementById("background").style.backgroundImage = "url('images/misty-background.jpg')";
+        
+        } else if(`${data.current.condition.text.includes('rain')}`) {
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')";
+        
+        } else if(`${data.current.condition.text.includes('snow')}`) {
+            document.getElementById("background").style.backgroundImage = "url('images/snowing.webp')";
+        
+        } else if(`${data.current.condition.text.includes('torrential')}`) {
+            document.getElementById("background").style.backgroundImage = "url('images/torrentialrain.webp')";
+        
+        } else if(`${data.current.condition.text.includes('Sunny')}`) {
+            document.getElementById("background").style.backgroundImage = "url('images/sunnyday.jpg')";
+        
+        } else if(`${data.current.condition.text.includes('cast')}`) {
+            document.getElementById("background").style.backgroundImage = "url('images/overcastpicture.jpg')";
+        }
+
+        //Scenarios of weather along with their respective icon assignments
         if(`${data.current.condition.text}` === "Sunny") {
+            //if condition matches string, then change the icon to what's provided
             document.getElementById("icon").innerHTML = "<img src=images/sunny.png>";
         
         } else if(`${data.current.condition.text}` === 'Partly cloudy') {
