@@ -61,165 +61,192 @@ const getWeatherData = (zip) => {
         console.log(data);
         // console.log(date);
 
-        //Dynamically change background according to weather
-        if(`${data.current.condition.text.includes('ist')}`) {
-            document.getElementById("background").style.backgroundImage = "url('images/misty-background.jpg')";
-        
-        } else if(`${data.current.condition.text.includes('rain')}`) {
-            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')";
-        
-        } else if(`${data.current.condition.text.includes('snow')}`) {
-            document.getElementById("background").style.backgroundImage = "url('images/snowing.webp')";
-        
-        } else if(`${data.current.condition.text.includes('torrential')}`) {
-            document.getElementById("background").style.backgroundImage = "url('images/torrentialrain.webp')";
-        
-        } else if(`${data.current.condition.text.includes('Sunny')}`) {
-            document.getElementById("background").style.backgroundImage = "url('images/sunnyday.jpg')";
-        
-        } else if(`${data.current.condition.text.includes('cast')}`) {
-            document.getElementById("background").style.backgroundImage = "url('images/overcastpicture.jpg')";
-        }
-
-        //Scenarios of weather along with their respective icon assignments
+        //Dynamically change background according to weather and
+        //scenarios of weather along with their respective icon assignments
         if(`${data.current.condition.text}` === "Sunny") {
-            //if condition matches string, then change the icon to what's provided
+            //if condition matches string, then change the icon/background image to what's provided
             document.getElementById("icon").innerHTML = "<img src=images/sunny.png>";
+            document.getElementById("background").style.backgroundImage = "url('images/sunnyday.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Partly cloudy') {
             document.getElementById("icon").innerHTML = "<img src=images/partly_cloudy.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/partlycloudy.jpg')"
 
         } else if (`${data.current.condition.text}` === 'Overcast') {
             document.getElementById("icon").innerHTML = "<img src=images/overcast.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/overcastpicture.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Mist') {
             document.getElementById("icon").innerHTML = "<img src=images/mist.png>"
+            document.getElementById("background").style.backgroundImage = "url('misty-background.jpg')"
         
         } else if(`${data.current.condition.text}` === 'Patchy rain possible') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_rain_possible.png>"
-        
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
+
         } else if(`${data.current.condition.text}` === 'Patchy snow possible') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_snow_possible.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Patchy sleet possible') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_sleet_possible.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Thundery outbreaks possible') {
             document.getElementById("icon").innerHTML = "<img src=imagthundery_outbreaks_possible.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/thundercloud.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Blowing snow') {
             document.getElementById("icon").innerHTML = "<img src=images/blowing_snow.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if(`${data.current.condition.text}` === 'Blizzard') {
             document.getElementById("icon").innerHTML = "<img src=images/partly_cloudy.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Fog') {
             document.getElementById("icon").innerHTML = "<img src=images/fog.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/foggy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Freezing fog') {
             document.getElementById("icon").innerHTML = "<img src=images/freezing_fog.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/thundercloud.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Patchy light drizzle') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_light_drizzle.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'light drizzle') {
             document.getElementById("icon").innerHTML = "<img src=images/light_drizzle.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` == 'Freezing drizzle') {
             document.getElementById("icon").innerHTML = "<img src=images/freezing_drizzle.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` === 'Heavy freezing drizzle') {
             document.getElementById("icon").innerHTML = "<img src=images/heavy_freezing_drizzle.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Patchy light rain') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_light_rain.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Light rain') {
             document.getElementById("icon").innerHTML = "<img src=images/light_rain.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` === 'Moderate rain at times') {
             document.getElementById("icon").innerHTML = "<img src=images/light_rain.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` === 'Moderate rain') {
             document.getElementById("icon").innerHTML = "<img src=images/light_rain.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Heavy rain at times') {
             document.getElementById("icon").innerHTML = "<img src=images/heavy_rain_at_times.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Heavy rain') {
             document.getElementById("icon").innerHTML = "<img src=images/heavy_rain.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` === 'Light freezing rain') {
             document.getElementById("icon").innerHTML = "<img src=images/light_freezing_rain.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` === 'Moderate or heavy freezing rain') {
             document.getElementById("icon").innerHTML = "<img src=images/moderate_or_heavy_freezing_rain.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Light sleet') {
             document.getElementById("icon").innerHTML = "<img src=images/light_sleet.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if(`${data.current.condition.text}` === 'Moderate or heavy sleet') {
             document.getElementById("icon").innerHTML = "<img src=images/moderate_or_heavy_sleet.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Patchy light snow') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_light_snow.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Light snow') {
             document.getElementById("icon").innerHTML = "<img src=images/light_snow.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if(`${data.current.condition.text}` === 'Patchy moderate snow') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_moderate_snow.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if(`${data.current.condition.text}` === 'Moderate snow') {
             document.getElementById("icon").innerHTML = "<img src=images/blizzard.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Patchy heavy snow') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_heavy_snow.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Heavy snow') {
             document.getElementById("icon").innerHTML = "<img src=images/blizzard.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if(`${data.current.condition.text}` === 'Ice pellets') {
             document.getElementById("icon").innerHTML = "<img src=images/light_sleet.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if(`${data.current.condition.text}` === 'Light rain shower') {
             document.getElementById("icon").innerHTML = "<img src=images/light_drizzle.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` === 'Moderate or heavy rain shower') {
             document.getElementById("icon").innerHTML = "<img src=images/moderate_or_heavy_rain_shower.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` === 'Torrential rain shower') {
             document.getElementById("icon").innerHTML = "<img src=images/torrential_rain_shower.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/torrentialrain.webp')"
         
         } else if(`${data.current.condition.text}` === 'Light sleet showers') {
             document.getElementById("icon").innerHTML = "<img src=images/light_sleet.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Moderate or heavy sleet showers') {
             document.getElementById("icon").innerHTML = "<img src=images/moderate_or_heavy_freezing_rain.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/raining.jpeg')"
         
         } else if (`${data.current.condition.text}` === 'Light snow showers') {
             document.getElementById("icon").innerHTML = "<img src=images/light_snow_showers.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Moderate or heavy snow showers') {
             document.getElementById("icon").innerHTML = "<img src=images/moderate_or_heavy_snow_showers.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if(`${data.current.condition.text}` === 'Patchy light rain with thunder') {
             document.getElementById("icon").innerHTML = "<img src=images/thundery_outbreaks_possible.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/thundercloud.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Light showers of ice pellets') {
             document.getElementById("icon").innerHTML = "<img src=images/light_showers_of_ice_pellets.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Moderate or heavy showers of ice pellets') {
             document.getElementById("icon").innerHTML = "<img src=images/moderate_or_heavy_showers_of_ice_pellets.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/snowy.jpg')"
         
         } else if (`${data.current.condition.text}` === 'Moderate or heavy rain with thunder') {
             document.getElementById("icon").innerHTML = "<img src=images/thundery_outbreaks_possible.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/thundercloud.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Patchy light snow with thunder') {
             document.getElementById("icon").innerHTML = "<img src=images/patchy_light_snow_with_thunder.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/thundercloud.jpeg')"
         
         } else if(`${data.current.condition.text}` === 'Moderate or heavy snow with thunder') {
             document.getElementById("icon").innerHTML = "<img src=images/moderate_or_heavy_snow_with_thunder.png>"
+            document.getElementById("background").style.backgroundImage = "url('images/thundercloud.jpeg')"
         }
     });
 }

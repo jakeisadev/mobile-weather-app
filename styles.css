@@ -20,8 +20,13 @@ body {
     z-index: -1;
 }
 
+#zip {
+    opacity: 0.8;
+}
+
 .zip-code-entry {
     text-align: center;
+    opacity: 1.0;
 }
 
 p {
@@ -67,6 +72,11 @@ input:invalid {
     margin: auto;
     text-align: center;
     margin-top: 80px;
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #temperature {
@@ -74,6 +84,7 @@ input:invalid {
     color: #e5e4e2;
     width: 100%;
     margin: auto;
+    opacity: 0.9;
 }
 
 #icon {
@@ -98,16 +109,18 @@ input:invalid {
 .weather-grid {
     display: grid;
     grid-template-columns: repeat(3, 100px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    grid-gap: 0 5px;
-    margin: 80px 10px 0 10px;
+    margin: auto;
     height: 250px;
+    margin-top: 55px;
     border-radius: 5px;
-    column-gap: 5px;
     overflow-x: hidden;
-    width: 95%;
+    width: 75%;
+    background-color: #c0b5ab;
+    opacity: 0.8;
 }
 
 .item {
