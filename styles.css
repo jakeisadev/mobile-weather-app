@@ -44,6 +44,10 @@ body {
     font-size: 1.1rem;
 }
 
+.battery {
+    margin-right: 5px;
+}
+
 .material-icons {
     color: white;
 }
@@ -100,7 +104,7 @@ input:invalid {
 .weather-wrapper {
     margin: auto;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 40px;
     width: 75%;
     padding: 10px;
     border-radius: 5px;
@@ -109,7 +113,7 @@ input:invalid {
 }
 
 #temperature {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #e5e4e2;
     width: 100%;
     margin: auto;
@@ -135,13 +139,21 @@ input:invalid {
     color: #e5e4e2;
 }
 
+#humidity {
+    white-space: normal;
+}
+
+#precip {
+    white-space: normal;
+}
+
 .weather-grid {
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: auto;
     height: 350px;
-    margin-top: 55px;
+    margin-top: 15px;
     border-radius: 5px;
     overflow-x: hidden;
     width: 75%;
@@ -153,12 +165,12 @@ input:invalid {
 .item {
     display:flex;
     align-items: center;
-    padding: 10px;
+    padding: 7px;
     color: black;
     opacity: 0.8;
     height: 100%;
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 /* .toggle {
@@ -179,13 +191,15 @@ span {
 .flipswitch {
     position: fixed;
     left: 50%;
-    bottom: 20px;
+    bottom: -5px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
   }
+
   .flipswitch input[type=checkbox] {
     display: none;
   }
+
   .flipswitch-label {
     display: block;
     overflow: hidden;
@@ -193,6 +207,7 @@ span {
     border: 2px solid #999999;
     border-radius: 50px;
   }
+
   .flipswitch-inner {
     width: 200%;
     margin-left: -100%;
@@ -202,6 +217,7 @@ span {
     -o-transition: margin 0.3s ease-in 0s;
     transition: margin 0.3s ease-in 0s;
   }
+
   .flipswitch-inner:before, .flipswitch-inner:after {
     float: left;
     width: 50%;
@@ -216,12 +232,14 @@ span {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
+
   .flipswitch-inner:before {
     content: "Fahrenheit";
     padding-left: 12px;
     background-color: #1fb743;
     color: #FFFFFF;
   }
+
   .flipswitch-inner:after {
     content: "Celsius";
     padding-right: 12px;
@@ -229,6 +247,7 @@ span {
     color: #888888;
     text-align: right;
   }
+
   .flipswitch-switch {
     width: 31px;
     margin: 9.5px;
@@ -245,9 +264,12 @@ span {
     -o-transition: all 0.3s ease-in 0s;
     transition: all 0.3s ease-in 0s;
   }
+
   .flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
     margin-left: 0;
   }
+
   .flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
     right: 0;
   }
+
