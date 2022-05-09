@@ -79,6 +79,7 @@ const getWeatherData = (zip) => {
         } else if (`${data.current.condition.text}` === 'Overcast') {
             document.getElementById("icon").innerHTML = "<img src=images/overcast.png>"
             document.getElementById("background").style.backgroundImage = "url('images/overcastpicture.jpg')"
+            
         //Mist
         } else if (`${data.current.condition.text}` === 'Mist') {
             document.getElementById("icon").innerHTML = "<img src=images/mist.png>"
@@ -293,7 +294,7 @@ const getWeatherData = (zip) => {
         } else if(`${data.current.condition.text}` === 'Moderate or heavy snow with thunder') {
             document.getElementById("icon").innerHTML = "<img src=images/moderate_or_heavy_snow_with_thunder.png>"
             document.getElementById("background").style.backgroundImage = "url('images/thundercloud.jpeg')"
-            
+
         }
     });
 }
