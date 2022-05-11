@@ -53,10 +53,10 @@
     //Enter zip code or city
     //Put Celsius next to Farenheit
     //Think of better practice than else if
-
+    
 
     const dispWeather = (e) => {
-        e.preventDefault(); //DOn't refresh the page
+        e.preventDefault(); //Don't refresh the page
         //dat can be either zip or city
         let data = document.getElementById('zip').value //Fetching the value of an input field.
         console.log(`You Entered ${data}`);
@@ -75,10 +75,11 @@
         document.getElementById("humidity").innerHTML = `${data.current.humidity} g/m3`;
         document.getElementById("wind-dr").innerHTML = `${data.current.wind_dir}`;
         document.getElementById("wind-mph").innerHTML = `${data.current.wind_mph}`;
-        document.getElementById("precip").innerHTML = `${data.current.precip_in}`
-        console.log(`${data.current.condition.icon}`);
+        document.getElementById("precip").innerHTML = `${data.current.precip_in}`;
+        document.getElementById("celsius").innerHTML = `&deg${data.current.temp_c} C`
+        //When the user inputs a City/Zip, load the appropriate icon
+        //for that locations weather
         let imageUrl = `https:${data.current.condition.icon}`
-        console.log(imageUrl);
             document.getElementById("icon").innerHTML = `<img src="${imageUrl}">`
     });
 }
