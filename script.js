@@ -69,14 +69,16 @@
 
         console.log(data);
         //Setting variables within the object to be applied to HTML
-        document.getElementById("temperature").innerHTML = `${data.current.temp_f}&deg`;
+        document.getElementById("temperature").innerHTML = `${data.current.temp_f}&degF`;
         document.getElementById("weather").innerHTML = `${data.current.condition.text}`;
         document.getElementById("state").innerHTML = `${data.location.name}` + ", " + `${data.location.region}`;
         document.getElementById("humidity").innerHTML = `${data.current.humidity} g/m3`;
         document.getElementById("wind-dr").innerHTML = `${data.current.wind_dir}`;
         document.getElementById("wind-mph").innerHTML = `${data.current.wind_mph}`;
         document.getElementById("precip").innerHTML = `${data.current.precip_in}`;
-        document.getElementById("celsius").innerHTML = `&deg${data.current.temp_c} C`
+        document.getElementById("celsius").innerHTML = `&deg${data.current.temp_c} C`;
+        document.getElementById("feelslike").innerHTML = `${data.current.feelslike_f}&degF`;
+        document.getElementById("pressure").innerHTML = `${data.current.pressure_in}`
         //When the user inputs a City/Zip, load the appropriate icon
         //for that locations weather
         let imageUrl = `https:${data.current.condition.icon}`
