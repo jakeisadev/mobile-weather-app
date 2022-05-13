@@ -76,7 +76,7 @@
         document.getElementById("wind-dr").innerHTML = `${data.current.wind_dir}`;
         document.getElementById("wind-mph").innerHTML = `${data.current.wind_mph}`;
         document.getElementById("precip").innerHTML = `${data.current.precip_in}`;
-        document.getElementById("celsius").innerHTML = `&deg${data.current.temp_c} C`;
+        document.getElementById("celsius").innerHTML = `${data.current.temp_c}&degC`;
         document.getElementById("feelslike").innerHTML = `${data.current.feelslike_f}&degF`;
         document.getElementById("pressure").innerHTML = `${data.current.pressure_in}`
         //When the user inputs a City/Zip, load the appropriate icon
