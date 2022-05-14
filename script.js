@@ -66,8 +66,8 @@
     fetch(`http://api.weatherapi.com/v1/current.json?key=ab742bd6c230495d9be133233220305&q=${data}&aqi=no`)
     .then(res => res.json())
     .then((data) => {
+        
 
-        console.log(data);
         //Setting variables within the object to be applied to HTML
         document.getElementById("temperature").innerHTML = `${data.current.temp_f}&degF`;
         document.getElementById("weather").innerHTML = `${data.current.condition.text}`;
@@ -83,5 +83,6 @@
         //for that locations weather
         let imageUrl = `https:${data.current.condition.icon}`
             document.getElementById("icon").innerHTML = `<img src="${imageUrl}">`
+
     });
 }
