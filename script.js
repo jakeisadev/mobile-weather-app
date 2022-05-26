@@ -63,7 +63,7 @@
 
         document.getElementById('zip').value = ''
 
-    fetch(`http://api.weatherapi.com/v1/current.json?key=ab742bd6c230495d9be133233220305&q=${data}&aqi=no`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=ab742bd6c230495d9be133233220305&q=${data}&aqi=no`)
     .then(res => res.json())
     .then((data) => {
         
