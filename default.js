@@ -1,5 +1,5 @@
 const defaultWeather = () => {
-    fetch('http://api.weatherapi.com/v1/current.json?key=ab742bd6c230495d9be133233220305&q=charlotte&aqi=no')
+    fetch('https://api.weatherapi.com/v1/current.json?key=ab742bd6c230495d9be133233220305&q=charlotte&aqi=no')
     .then(res => res.json())
     .then((data) => {
         
